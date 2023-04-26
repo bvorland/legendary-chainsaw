@@ -11,6 +11,9 @@ resource functionAppResource 'Microsoft.Web/sites@2020-12-01' = {
   kind: 'functionapp'
   properties: {
     serverFarmId: planName
+    siteConfig: {
+      linuxFxVersion: 'python|3.10'
+    }
   }
 }
 
@@ -23,6 +26,9 @@ resource functionAppStagingSlot 'Microsoft.Web/sites/slots@2016-08-01' = {
   }
   properties: {
     serverFarmId: planName
+    siteConfig: {
+      linuxFxVersion: 'python|3.10'
+    }
   }
   dependsOn:[
     functionAppResource

@@ -11,6 +11,9 @@ resource asp 'Microsoft.Web/serverfarms@2020-12-01' = {
     name:planSku
     tier:planTier
   }
+  properties:{
+    reserved:true
+  }
 }
 
 output planId string = asp.id

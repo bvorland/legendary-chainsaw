@@ -19,7 +19,6 @@ resource functionAppSlotConfigNames 'Microsoft.Web/sites/config@2018-11-01' = {
 resource functionAppAppsettings 'Microsoft.Web/sites/config@2018-11-01' = {
   name: '${functionAppName}/appsettings'
   properties: {
-    pythonVersion: '3.10'
     CustomerApiKey: 'This is the production setting'
     databaseConnectionString: dbConnectionString
     AzureWebJobsStorage: storageAccountConnectionString
@@ -36,7 +35,6 @@ resource functionAppAppsettings 'Microsoft.Web/sites/config@2018-11-01' = {
 resource functionAppStagingAppsettings 'Microsoft.Web/sites/slots/config@2016-08-01' = {
   name: '${functionAppStagingName}/appsettings'
   properties: {
-    pythonVersion: '3.10'
     CustomerApiKey: 'This is the staging setting'
     databaseConnectionString: dbConnectionString
     AzureWebJobsStorage: storageAccountConnectionString
